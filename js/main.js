@@ -17,18 +17,17 @@ function addExpense() {
 // Delete expense from list
 function deleteExpense() {
 	$(this).parent('li').remove();
-	console.log('delete');
 }
 
 function moveExpense() {
 	if ($(this).is(':checked')) {
 		var paidItem = $(this).parent().wrap('<div/>').html();
 		$(this).parent('li').remove();
-		$('#paidList').append(paidItem);
+		$('#paidList').append('<li>'+paidItem+'</li>');
 	}	else if ($(this).is(!':checked')) {
 		var unpaidItem = $(this).parent().wrap('<div/>').html();
 		$(this).parent('li').remove();
-		$('#paidList').append(unpaidItem);
+		$('#paidList').append('<li>'+unpaidItem+'</li>');
 	}
 }
 
