@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <link rel="stylesheet" href="styles/css/main.css" />
+        <link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
+		<title></title>
+	</head>
+	<body>
+        <div class="site">
+            <header></header>
+            <aside class="widget">
+                <h1>PayNext Expense Tracker</h1>
+                <form>
+                    <input type-"text" id="new-text" placeholder="Expense Name" autofocus/>
+                    <input type="date" id="new-date" placeholder="Due Date"/>
+                    <input type="number" id="new-amount" placeholder="Amount Due"/>
+                    <button id="add">+</button>
+                </form>
+                <ul id="unpaidList">
+                    <li><button class="delete">x</button><a href="#" datetime="2013-02-15" data-amount="$1500">First Expense</a><input type="checkbox"></li>
+                    <li><button class="delete">x</button><a href="#" datetime="2013-02-28" data-amount="$30">Second Expense</a><input type="checkbox"></li>
+                    <li><button class="delete">x</button><a href="#" datetime="2013-02-05" data-amount="$400">Third Expense</a><input type="checkbox"></li>
+                </ul>
+                <ul id="paidList">
+                </ul>
+            </aside>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
+        <script src='js/main.js'></script>
+	</body>
+</html>
