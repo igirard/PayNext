@@ -6,24 +6,38 @@ if (event.which === 13)
 // Add new expense to list
 function addExpense() {
 	if (event.type === 'click' || (event.type === 'keyup' && event.which === 13)) {
-	var text = $("#new-text").val();
-	var date = $("#new-date").val();
-	var amount = $("#new-amount").val();
-	$('#unpaidList').append('<li><button class="delete">x</button><a href="#" datetime="'+date+'" data-amount="'+amount+'">'+text+'</a><input type="checkbox"></li>');
-	$('#new-text').val("");
-}
+		var text = $("#new-text").val();
+		var date = $("#new-date").val();
+		var amount = $("#new-amount").val();
+		$('#unpaidList').append('<li><button class="delete">x</button><a href="#" datetime="'+date+'" data-amount="'+amount+'">'+text+'</a><input type="checkbox"></li>').slideDown();
+		$('#new-text').val("");
+	}
 }
 
 // Delete expense from list
 function deleteExpense() {
 	$(this).parent('li').remove();
+	console.log('delete');
+}
+
+function moveExpense() {
+	if ($(this).is(':checked')) {
+		var paidItem = $(this).parent().wrap('<div/>').html();
+		$(this).parent('li').remove();
+		$('#paidList').append(paidItem);
+	}	else if ($(this).is(!':checked')) {
+		var unpaidItem = $(this).parent().wrap('<div/>').html();
+		$(this).parent('li').remove();
+		$('#paidList').append(unpaidItem);
+	}
 }
 
 // Ready function
 $(document).ready(function() {
 	$('#unpaidList').sortable();
 	$('#add').on('click keyup', addExpense);
-	$('.delete').on('click', deleteExpense);
+	$('.widget').on('click','input:checkbox', moveExpense);
+	$('.widget').on('click','.delete', deleteExpense);
 
 
 /* Removed styling for now
