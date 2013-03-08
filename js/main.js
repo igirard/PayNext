@@ -1,15 +1,10 @@
-/* keyup if statement (where to enter?)
-if (event.which === 13)
-	{addExpense();}
-*/
-
 // Add new expense to list
 function addExpense() {
 	if (event.type === 'click' || (event.type === 'keyup' && event.which === 13)) {
 		var text = $("#new-text").val();
 		var date = $("#new-date").val();
 		var amount = $("#new-amount").val();
-		$('#unpaidList').append('<li><button class="delete">x</button><a href="#" datetime="'+date+'" data-amount="'+amount+'">'+text+'</a><input type="checkbox"></li>').slideDown();
+		$('#unpaidList').append('<li><button class="delete">x</button><a href="#" datetime="'+date+'" data-amount="'+amount+'">'+text+'</a><input type="checkbox"></li>').slideDown('slow');
 		$('#new-text').val("");
 	}
 }
@@ -24,7 +19,8 @@ function moveExpense() {
 		var paidItem = $(this).parent().wrap('<div/>').html();
 		$(this).parent('li').remove();
 		$('#paidList').append('<li>'+paidItem+'</li>');
-	}	else if ($(this).is(!':checked')) {
+	}
+	if ($(this).is(!':checked')) {
 		var unpaidItem = $(this).parent().wrap('<div/>').html();
 		$(this).parent('li').remove();
 		$('#paidList').append('<li>'+unpaidItem+'</li>');
@@ -37,6 +33,7 @@ $(document).ready(function() {
 	$('#add').on('click keyup', addExpense);
 	$('.widget').on('click','input:checkbox', moveExpense);
 	$('.widget').on('click','.delete', deleteExpense);
+
 
 
 /* Removed styling for now
