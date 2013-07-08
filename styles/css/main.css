@@ -1,4 +1,17 @@
 @import url(normalize.css);
+header {
+  background: grey;
+  top: 0px;
+  width: 100%; }
+
+#logo {
+  left: 10%;
+  position: relative; }
+
+.widget {
+  margin: 0 auto;
+  max-width: 600px; }
+
 /*html {
   font-size: 100%; }
 

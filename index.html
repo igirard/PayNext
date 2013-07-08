@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
 	<head>
-        <link rel="stylesheet" href="styles/css/main.css" />
-        <link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
-		<title></title>
+<!--        <link rel="stylesheet" href="styles/css/main.css" />
+-->
+        <link href='//fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
+		<title>Toup&eacute;e (\t&#252;-&#712;p&#257;\)</title>
 	</head>
 	<body>
         <div class="site">
-            <header></header>
+            <header>
+                <div id="logo">
+                <h1>Toup&eacute;e</h1>
+                </div>
+                <nav id="menu">
+                    <ul>
+                        <li><a href="#">login</a></li>
+                    </ul>
+                </nav>
+            </header>
             <aside class="widget">
-                <h1>PayNext Expense Tracker</h1>
                 <form>
                     <input type-"text" id="new-text" placeholder="Expense Name" autofocus/>
                     <input type="date" id="new-date" placeholder="Due Date"/>
@@ -17,7 +26,7 @@
                     <button id="add">+</button>
                 </form>
                 <ol id="unpaidList">
-                    <h2>Pay Next</h2>
+                    <h2></h2>
                     <li><button class="delete">x</button><a href="#" datetime="2013-02-15" data-amount="$1500">First Expense</a><input type="checkbox"></li>
                     <li><button class="delete">x</button><a href="#" datetime="2013-02-28" data-amount="$30">Second Expense</a><input type="checkbox"></li>
                     <li><button class="delete">x</button><a href="#" datetime="2013-02-05" data-amount="$400">Third Expense</a><input type="checkbox"></li>
@@ -27,9 +36,8 @@
                 </ul>
             </aside>
         </div>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
-        <script src='js/main.js'></script>
+         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js" type="text/javascript"></script>
+         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+         <script src='js/main.js'></script>
 	</body>
 </html>

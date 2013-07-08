@@ -1,0 +1,49 @@
+// imports
+
+@import 'normalize.css'
+
+
+// variables
+
+$color_a: rgba(126, 182, 104, 1)
+$color_b: grey
+$color_c: white
+
+
+// styles
+
+html
+	font-size: 100%
+
+body
+	background:
+		color: $color_a
+	font:
+		family: "Helvetica Neue", Helvetica, Arial, sans-serif
+		size: 62.5%
+
+header
+	height: 120px
+	background: $color_c
+	margin: 0 0 20px 0
+
+h1
+	padding: 1% 0 0 6%
+	font:
+		size: 3em
+	text-shadow: 1px 1px 1px rgba(0,0,0,.4)
+
+.site
+	margin: 0 40px 40px 40px auto
+	width: 90%px
+
+.widget
+	background: rgba($color_c, .4)
+	border: solid $color_b 4px
+		radius: 35px
+	color: rgba(4,4,4, .5)
+	display: block
+	margin: 5% auto
+	position: relative
+	width: 600px
+	box-shadow: inset 2px 2px 3px rgba(0,0,0,.4)
